@@ -1,0 +1,12 @@
+include ../core/mixins/all
+
+mixin list(text1, text2)
+  .col!=text1
+  .col!=text2
+
+ul.nav-list.nav-list-1
+  li: +list("Since", "12-02-2012")
+  li: +list("Total distance", "521.5 km")
+  li: +list("Average speed", "32.3 km/h")
+  li: +list("Average consumption", "16.8 kWh/km")
+  li.last: +list("Total consumption", "87.5 kWh")

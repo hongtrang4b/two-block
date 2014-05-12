@@ -1,0 +1,46 @@
+mixin footer-default(linkback, linkadd)
+  footer.footer
+    .inner
+      ul.footer-control
+        li.text-left
+          a.btn.btn-back(href="#{linkback}", title ="Back")
+            span.wi-icon.wi-icon-back Back
+        li.text-center
+        li.text-right
+          - if(typeof(linkadd) === "undefined") {
+          a(href="javascript:void(0);", title ="Add" class="btn btn-add disabled")
+            span.wi-icon.wi-icon-add Add
+          - } else {
+          a.btn.btn-add(href="#{linkadd}", title ="Add")
+            span.wi-icon.wi-icon-add Add
+          - }
+
+mixin footer(link01, items)
+  footer.footer
+    .inner
+      ul.footer-control
+        - if(typeof(link01) === "string") {
+        li.text-left
+          a.btn.btn-back(href="#{link01}", title ="back")
+            span.wi-icon.wi-icon-back back
+        - } else {
+        li.text-left
+          +link(link01.icon, link01.title, link01.href, link01.text)(class="#{link01.class}")
+        - }
+
+        li.text-center
+          block footer-center
+
+        - if(typeof(items) === "undefined") {
+        li.text-right
+          a.btn.btn-add.disabled(href="javascript:void(0);", title ="add")
+            span.wi-icon.wi-icon-add add
+        - } else {
+        li.text-right
+          a.btn.btn-add(href="javascript:void(0);", title ="add")
+            span.wi-icon.wi-icon-add add
+          ul.menu-1
+            each item in items
+              li
+                +link(item.icon, item.title, item.href, item.text)(class="#{item.class}")
+        - }

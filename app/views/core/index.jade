@@ -1,0 +1,83 @@
+extends ../_layouts/app-layout
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Index"
+
+block body-content
+
+  mixin page(n)
+    a(href=n+".html"): span=n
+
+  #tpl
+    .row
+      .span12: h2 Sprint 1
+      .span12: +page('home')
+      .span12: +page('main-menu')
+      .span12: +page('menu-navigation')
+      .span12: +page('nav-driver-to')
+      .span12: +page('nav-services')
+      .span12: +page('menu-multimedia')
+      .span12: +page('multimedia-media')
+      .span12: +page('multimedia-pictures')
+      .span12: +page('multimedia-usb')
+      .span12: +page('multimedia-video')
+      .span12: +page('multimedia-radio')
+      .span12: +page('menu-phone')
+      .span12: +page('menu-services')
+      .span12: +page('menu-system')
+      .span12: +page('menu-vehicle')
+      .span12: +page('menu-zoe-vehicle')
+      .span12: +page('vehicle-driving')
+      .span12: +page('zoe-vehicle-driving')
+      .span12: +page('zoe-vehicle-electrical')
+      .span12: +page('dashboard')
+      .span12: +page('zoe-dashboard')
+      .span12: +page('system-notifiaction')
+      .span12: +page('outside-air-quality')
+      .span12: +page('take-care')
+      .span12: +page('zoe-take-care')
+      .span12: +page('time-page')
+      .span12: +page('calllogs')
+      .span12: +page('weather')
+      .span12: h2 Sprint 2
+      .span12: +page('eco-coaching')
+      .span12: +page('zoe-eco-coaching')
+      .span12: +page('trip-report')
+      .span12: +page('zoe-trip-report')
+      .span12: +page('map')
+      .span12: +page('onboard-computer')
+      .span12: +page('zoe-onboard-computer')
+      .span12: +page('multimedia-usb-folders')
+      .span12: +page('multimedia-usb-albums')
+      .span12: +page('multimedia-usb-songs')
+      .span12: +page('multimedia-usb-albums-songs')
+      .span12: +page('multimedia-usb-artists')
+      .span12: +page('multimedia-usb-player')
+      .span12: +page('multimedia-usb-player-electrial')
+      .span12: +page('multimedia-bluetooth-player')
+      .span12: +page('multimedia-bluetooth-player-electrial')
+      .span12: +page('favourites')
+      .span12: h2 Sprint 3
+      .span12: +page('range-selection')
+      .span12: +page('comfort-timer-1')
+      .span12: +page('comfort-timer-2')
+      .span12: +page('comfort-timer-3')
+      .span12: +page('charge-scheduler-1')
+      .span12: +page('charge-scheduler-2')
+      .span12: +page('charge-scheduler-3')
+      .span12: +page('charge-scheduler-timer')
+      .span12: +page('charge-scheduler-calender')
+      .span12: +page('video-introduction')
+      .span12: +page('video-address')
+      .span12: +page('video-tomtom-places-1')
+      .span12: +page('video-tomtom-places-2')
+      .span12: +page('video-phonebook')
+      .span12: +page('video-dial')
+      .span12: +page('video-energy-flow')
+      .span12: +page('video-consumption-details')
+      .span12: +page('video-services')
+      .span12: +page('video-email')

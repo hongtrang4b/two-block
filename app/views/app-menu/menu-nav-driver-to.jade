@@ -1,0 +1,25 @@
+include ../core/mixins/all
+section.drive-to-block
+  .slideshow
+      .preview
+        ul.slider
+          li
+            ul.list-item
+              li.disabled: +menu-item("upload/nav-drive-home.png", "Home")
+              li.disabled: +menu-item("upload/nav-drive-saved.png", "Saved locations")
+              li: +menu-item("upload/nav-drive-address.png", "Address", "video-address.html")
+              li.disabled: +menu-item("upload/nav-drive-recent.png", "Recent destinations")
+              li: +menu-item("upload/nav-drive-tomtom.png", "TomTom Places", "video-tomtom-places-1.html")
+              li.disabled: +menu-item("upload/nav-drive-point.png", "Point of interest")
+          li
+            ul.list-item
+              li.disabled: +menu-item("upload/nav-drive-map.png", "Point of map")
+              li.disabled: +menu-item("upload/nav-drive-latitude.png", "Latitude Longitude")
+      .control
+        +link(0, "prev", "javascript:void(0);").wi-icon.wi-icon-prev
+        +link(0, "next", "javascript:void(0);").wi-icon.wi-icon-next
+      ul.paging
+        li.active
+          +link(0, "1", "javascript:void(0);").wi-icon.wi-icon-page
+        li
+          +link(0, "1", "javascript:void(0);").wi-icon.wi-icon-page

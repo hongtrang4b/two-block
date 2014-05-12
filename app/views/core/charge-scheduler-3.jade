@@ -1,0 +1,22 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Charge scheduler"
+  - var bodyClass = "charge-scheduler"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-charge-scheduler/scheduler-2-3
+
+block footer-center
+  +link("", "Done", "#", "Done").btn.disabled
+
+block footer
+  include ../app-footer/scheduler

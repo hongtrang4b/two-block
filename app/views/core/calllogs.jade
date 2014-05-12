@@ -1,0 +1,15 @@
+extends ../_layouts/app-layout-calllogs
+//---------------------------
+//- Global template variables
+//---------------------------
+block variables
+  - var title = "Call logs"
+  - var bodyClass = "calllogs"
+//------------------------
+//- Page content goes here
+//------------------------
+block content
+  include ../app-tab/tab-calllogs
+
+block footer
+  +footer("menu-phone.html")

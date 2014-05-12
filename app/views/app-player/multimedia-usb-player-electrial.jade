@@ -1,0 +1,16 @@
+include ../core/mixins/all
+
+.cover-player
+  img(src="images/app/cover-player.png")
+.player-1
+  ul.control-player-1
+    li: +link("wi-icon", "prev", "javascript:void(0);", "").btn-prev-player
+    li: +link("wi-icon", "play", "javascript:void(0);", "").btn-play-player
+    li: +link("wi-icon", "next", "javascript:void(0);", "").btn-next-player
+  .barre-time
+    span.start-time 00:01
+    .rectangle
+      .rec-arrondi
+      .rec-buffer
+      .bouton-time
+    span.total-time 00:58

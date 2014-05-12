@@ -1,0 +1,116 @@
+.scheduler {
+  overflow: hidden;
+  height: 100%;
+  .summary {
+    margin: 6px 10px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+.scheduler-1 {
+  background: url('@{img-path}timer.png') no-repeat 50% 79px;
+}
+.scheduler-2 .summary {
+  margin: 25px 60px 0;
+  letter-spacing: 1.3px;
+}
+.comfort-timer .scheduler-2 .summary {
+  margin: 23px 10px 0;
+}
+.scheduler-content {
+  overflow: hidden;
+  width: 570px;
+  margin: 5px auto 0;
+  font-size: 28px;
+  color: #c4c4c4;
+  text-align: center;
+  .col {
+    float: left;
+    width: 176px;
+    // .size(176px; 174px);
+    margin: 0 7px;
+    background: url('@{img-path}bg-scheduler-timer-1.png') no-repeat;
+    &.checked {
+      background-image: url('@{img-path}bg-scheduler-timer-2.png');
+    }
+  }
+  .content {
+    .size(100%; 174px);
+  }
+  .row-1 {
+    line-height: 1.1;
+  }
+  .row-2 {
+    margin-top: 13px;
+    span {
+      display: inline-block;
+      padding: 8px 0 0 8px;
+      vertical-align: middle;
+      &.wi-icon {
+        padding: 0;
+      }
+      &.wi-icon-calendar {
+        margin-top: 9px;
+      }
+      &.wi-icon-off {
+        margin-top: 5px;
+      }
+      &.wi-icon-time {
+        margin-top: 8px;
+      }
+    }
+  }
+  .item {
+    .size(100%; 123px);
+    padding: 17px 15px;
+    .box-sizing(border-box);
+  }
+  .item-2 {
+    padding-top: 26px;
+    .row-2 {
+      margin-top: 12px;
+    }
+  }
+  .custom {
+    padding: 5px 15px;
+    line-height: 28px;
+  }
+}
+
+.scheduler-calender {
+  background: url("@{img-path}/bgd-chargeshed-calender.png") no-repeat right top;
+  margin: 6px 7px 0;
+  padding-top: 14px;
+  .clearfix();
+  .box-sizing(border-box);
+  .timeline {
+    float: left;
+    color: @text-title;
+    margin-left: 10px;
+    span {
+      display: block;
+      text-align: right;
+      font-size: 20px;
+      padding-top: 46px;
+      &:first-child {
+        padding-top: 26px;
+      }
+    }
+  }
+  .weekline {
+    float: left;
+    color: #ccc;
+    li {
+      float: left;
+      font-size: 30px;
+      text-align: center;
+      width: 97px;
+      margin-left: 8px;
+      &:first-child {
+        color: @white;
+        margin-left: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.radio {
+  #main {
+    &:extend(.calllogs #main);
+  }
+
+  footer {
+    background: none;
+  }
+
+  .tabs {
+    width: 624px;
+    left: 118px;
+    padding-left: 85px;
+  }
+
+  .calllogs-tabs-0 {
+     background-image: url('@{img-path}bg-tab01-01.png')
+  }
+  .calllogs-tabs-1 {
+     background-image: url('@{img-path}bg-tab01-02.png')
+  }
+  .calllogs-tabs-2 {
+     background-image: url('@{img-path}bg-tab01-03.png')
+  }
+  .scroll-content {
+    overflow: hidden;
+  }
+}
+//tabs 3
+.frequency-tabs {
+  .title-2 {
+    margin-top: 68px;
+  }
+}
+
+.frequency-content {
+  .clearfix();
+  width: 762px;
+  margin: 5px auto 0;
+}
+.control-left,
+.control-right,
+.lignes {
+  float: left;
+}
+.control-left .dup-arrow-frist,
+.control-right .dup-arrow-last {
+  background: url('@{img-path}bgd-arrow.png') no-repeat 0 0;
+  .size(72px; 74px);
+  .wi-icon {
+    margin: 22px 21px 21px 22px;
+  }
+}
+.control-left .arrow-prev,
+.control-right .arrow-next {
+  background: url('@{img-path}bgd-arrow-2.png') no-repeat 0 0;
+  .size(86px; 74px);
+  .wi-icon {
+    margin: 22px 33px 21px;
+  }
+}
+.control-left,
+.control-right {
+  a {
+    display: inline-block;
+  }
+  .wi-icon {
+    text-indent: -999em;
+  }
+}
+
+.lignes {
+  position: relative;
+  background: url('@{img-path}lignes.png') no-repeat center center;
+  .size(436px; 64px);
+  margin: 5px 5px 0;
+  ul {
+    text-align: center;
+    font-size: 0;
+    padding-top: 24px;
+    li {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #575b5c;
+      padding-left: 23px;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  .rectangle {
+    position: absolute;
+    display: block;
+    background: url('@{img-path}wi-selecteur.png') no-repeat 0 0;
+    text-indent: -999em;
+    .size(12px; 71px);
+    top: -3px;
+    left: 95px;
+  }
+}
+.unit-lignes {
+  overflow: hidden;
+  height: 71px;
+  margin-top: 19px;
+  padding: 0 0 0 202px;
+  font-size: 71px;
+  letter-spacing: 1px;
+  line-height: 1;
+  .not-selectable();
+}

@@ -1,0 +1,19 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Eco-coaching"
+  - var bodyClass = "eco-coaching"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-eco-coaching/index-1
+
+block footer
+  +footer-default("vehicle-driving.html")

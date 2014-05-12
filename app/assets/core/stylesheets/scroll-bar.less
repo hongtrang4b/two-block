@@ -1,0 +1,32 @@
+.scroll-bar {
+  position: absolute;
+  border: 1px solid @bg-gray-light;
+  top:0;
+  right:0;
+  bottom: 0;
+  .size(7px; 346px);
+  .dragger {
+    .size(7px; 115px);
+    background: url("@{img-path}bg-scroll.jpg");
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.usb-songs,
+.radio {
+  .scroll-bar {
+    .dragger {
+      background-image: url("@{img-path}bg-scroll-01.jpg")
+    }
+  }
+}
+
+.usb-songs .scroll-bar {
+  height: 352px;
+}
+
+.radio .scroll-bar {
+  height: 345px;
+}

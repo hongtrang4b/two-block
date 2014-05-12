@@ -1,0 +1,10 @@
+include ../core/mixins/all
+header.header
+  span.logo
+    img(src="images/app/logo.png", alt="")
+  nav.main-nav
+    ul
+      li: +link("wi-icon-notifications","Notifications","system-notifiaction.html", "2").btn.btn-notifications
+      li: +link("wi-icon-calllogs","Call logs","calllogs.html", "call").btn.btn-calllogs
+      li: +link("","Weather","weather.html", "12<sup>o</sup>C").btn.btn-weather
+      li: +link("","Time","time-page.html", "16:33").btn.btn-time

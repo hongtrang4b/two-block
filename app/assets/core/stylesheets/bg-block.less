@@ -1,0 +1,73 @@
+#main-app {
+  background: url("@{img-path}bg-main-menu.jpg") no-repeat center top;
+}
+.menu-navigation #main-app {
+  background-image: url("@{img-path}bg-navigation.jpg");
+}
+.menu-multimedia #main-app {
+  background-image: url("@{img-path}bg-multimedia.jpg");
+}
+.nav-driver-to #main-app {
+  background-image: url("@{img-path}bg-nav-driver-to.jpg");
+}
+.menu-phonebook #main-app {
+  background-image: url("@{img-path}bg-phone.jpg");
+}
+.menu-vehicle #main-app {
+  background-image: url("@{img-path}bg-vehicle.jpg");
+}
+.menu-services #main-app {
+  background-image: url("@{img-path}bg-services.jpg");
+}
+.menu-system #main-app {
+  background-image: url("@{img-path}bg-system.jpg");
+}
+.calllogs #main-app {
+  background-image: url('@{img-path}bg-calllogs.jpg');
+}
+.dashboard #main-app {
+  background-image: url('@{img-path}bg-dashboard.jpg');
+}
+.radio #main-app {
+    background-image: url('@{img-path}bg-radio.jpg');
+}
+.eco-coaching #main-app {
+  background-image: url('@{img-path}bg-eco.jpg');
+}
+.trip-report #main-app {
+  background-image: url('@{img-path}bg-trip.jpg');
+}
+.range-selection #main-app {
+  background: white;
+}
+.takecare #main-app,
+.outside-air-quality #main-app,
+.comfort-timer #main-app,
+.charge-scheduler #main-app {
+  &:extend(.menu-vehicle #main-app);
+}
+.system-notification #main-app {
+  &:extend(.menu-services #main-app);
+}
+.weather #main-app {
+  &:extend(.menu-navigation #main-app);
+}
+.onboard-computer #main-app {
+  &:extend(.trip-report #main-app);
+}
+.multimedia-usb-player #main-app,
+.multimedia-bluetooth-player #main-app {
+  &:extend(.menu-multimedia #main-app);
+}
+.favourites-page #main-app {
+  &:extend(.menu-navigation #main-app);
+}
+.favourites-page.favourites-1 #main-app {
+  &:extend(.menu-multimedia #main-app);
+}
+.favourites-page.favourites-2 #main-app {
+  &:extend(.menu-phonebook #main-app);
+}
+.favourites-page.favourites-3 #main-app {
+  &:extend(.menu-services #main-app);
+}

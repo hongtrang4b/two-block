@@ -1,0 +1,108 @@
+// Layouts
+#tpl {
+  padding:50px 0;
+  .span12{
+    width: 100%;
+  }
+  h2 {
+    margin: 30px 0 10px;
+  }
+  a {
+    font-size:16px;
+    display:block;
+    vertical-align:middle;
+    text-decoration:none;
+    background:#eee;
+    padding:15px;
+    color:#111;
+    line-height:1;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    &:hover {
+      background:#ddd;
+      color:#0d4e9d;
+    }
+    span {
+      text-align:center;
+    }
+  }
+}
+
+#app {
+  position: relative;
+  .size(965px; 683px);
+  margin: 0 auto;
+}
+
+.bg-board-top,
+.bg-board-left,
+.bg-board-right,
+.bg-board-bottom {
+  position: absolute;
+  z-index: 2;
+}
+
+.bg-board-top {
+  background: url("@{img-path}bgd-board-top.png") no-repeat;
+  .size(100%; 152px);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg-board-left {
+  background: url("@{img-path}bgd-board-left.png") no-repeat;
+  .size(35px; 683px);
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bg-board-right {
+  background: url("@{img-path}bgd-board-right.png") no-repeat;
+  .size(137px; 683px);
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bg-board-bottom {
+  background: url("@{img-path}bgd-board-bottom.png") no-repeat;
+  .size(100%; 83px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  .clearfix();
+}
+
+#main {
+  height: 340px;
+  .clearfix();
+}
+
+#main-app {
+  position: absolute;
+  opacity: 0;
+  .ie8 & {
+    filter: alpha(opacity=0);
+  }
+  overflow: hidden;
+  z-index: 1;
+  .size(800px; 480px);
+  top: 136px;
+  left: 32px;
+}
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  display: none;
+  .square(100%);
+  background: url("@{img-path}bg-overlay.png") repeat;
+}

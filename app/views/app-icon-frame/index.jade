@@ -1,0 +1,13 @@
+include ../core/mixins/all
+.group-top
+    ul
+      li: span.wi-icon.wi-icon-warning Warning
+      li: span.wi-icon.wi-icon-lock Lock
+    a.text(href="#", title="Back to renault config")
+      small BACK TO
+      span RENAULT CONFIG
+  .group-right
+    ul
+      li: span.wi-icon.wi-icon-reset Reset
+      li: +link(0, "lock", "javascript:void(0);").wi-icon.wi-icon-home
+  +link(0, "power", "time-page.html").wi-icon.wi-icon-power

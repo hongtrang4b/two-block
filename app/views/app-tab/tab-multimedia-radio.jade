@@ -1,0 +1,70 @@
+include ../core/mixins/all
+block body-content
+  section.call-logs-block(data-tab)
+    .tab-wrapper
+      .tab-content.preset-tabs.active
+        .scroll-block
+          .scroll-content
+            h3.title-1 AF |
+             em &nbsp;i&nbsp;
+             | -Traffic
+            ul.list-item-1
+              li: +link-text("Arrow", "javascript:void(0);", "Arrow", "1").btn-1.disabled
+              li: +link-text("BNR", "javascript:void(0);", "BNR", "2").btn-1
+              li: +link-text("Decibel", "javascript:void(0);", "Decibel", "3").btn-1.disabled
+              li: +link-text("Jazz FM", "javascript:void(0);", "Jazz FM", "4").btn-1.disabled
+              li: +link-text("Radio Pop", "javascript:void(0);", "Radio Pop", "5").btn-1.disabled
+              li: +link-text("Rock FM", "javascript:void(0);", "Rock FM", "6").btn-1.disabled
+            h3.title-2 2. BNR - Dancefloor
+
+      .tab-content(data-scroll)
+        .scroll-block
+          .radio-content
+            .scroll-content
+              h3.title-1 AF | i-Traffic
+              ul.list-item-2
+                li: +item-text("1.", "3PM").item-1
+                li: +item-text("2.", "Arrow").item-2
+                li: +item-text("3.", "BNR").item-3
+                li: +item-text("4.", "Decibel").item-4
+                li: +item-text("5.", "Jazz FM").item-5
+                li: +link-text("3FM", "#", "3FM", "1.").item-1
+                li: +link-text("Arrow", "#", "Arrow", "2.").item-2
+              aside.scroll-bar
+                .dragger
+        .tabs-control
+          +link("","","javascript:void(0);", "prev").btn-callogs-prev.disabled
+          +link("","","javascript:void(0);", "next").btn-callogs-next
+
+      .tab-content.frequency-tabs
+        .scroll-block
+          .scroll-content
+            h3.title-1 AF | i-Traffic
+            .unit-lignes 92.90
+            .frequency-content
+              .control-left
+                +link("wi-icon wi-icon-first", "first","javascript:void(0)","").dup-arrow-frist
+                +link("wi-icon wi-icon-prev-1", "prev","javascript:void(0)","").arrow-prev
+              .lignes
+                ul
+                  li 88
+                  li 90
+                  li 92
+                  li 94
+                  li 96
+                  li 98
+                  li 100
+                  li 102
+                  li 104
+                  li 106
+                  li 108
+                +link(0, "rectangle", "javascript:void(0);").rectangle
+              .control-right
+                +link("wi-icon wi-icon-next-1", "next","javascript:void(0)","").arrow-next
+                +link("wi-icon wi-icon-last", "last","javascript:void(0)","").dup-arrow-last
+            h3.title-2 2. BNR - Dancefloor
+
+    ul.tabs.calllogs-tabs-0
+      li.active: +link("","","javascript:void(0);", "Preset").calllogs-tabs-btn
+      li: +link("","","javascript:void(0);", "List").calllogs-tabs-btn
+      li: +link("","","javascript:void(0);", "Frequency").calllogs-tabs-btn

@@ -1,0 +1,18 @@
+extends ../_layouts/app-layout-home
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Main Menu"
+  - var bodyClass = "main-menu"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-menu/menu-main
+
+block footer
+  +footer-default("zoe-dashboard.html")

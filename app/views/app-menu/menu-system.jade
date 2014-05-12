@@ -1,0 +1,28 @@
+include ../core/mixins/all
+section.main-content
+  .slideshow
+    .preview
+      ul.slider
+        li
+          ul.list-item
+            li.disabled: +menu-item("upload/system-language.png", "Language")
+            li.disabled: +menu-item("upload/system-display.png", "Display")
+            li.disabled: +menu-item("upload/system-sound.png", "Sound")
+            li.disabled: +menu-item("upload/system-clock.png", "Clock")
+            li.disabled: +menu-item("upload/system-safety.png", "Safety warnings")
+            li.disabled: +menu-item("upload/system-home.png", "Home screen")
+        li
+          ul.list-item
+            li.disabled: +menu-item("upload/system-keyboards.png", "Keyboards")
+            li.disabled: +menu-item("upload/system-set.png", "Set units")
+            li.disabled: +menu-item("upload/system-statuts.png", "Statuts & Information")
+            li.disabled: +menu-item("upload/system-remove.png", "Remove SD-card")
+            li.disabled: +menu-item("upload/system-factory.png", "Factory reset")
+    .control
+      +link(0, "prev", "javascript:void(0);").wi-icon.wi-icon-prev
+      +link(0, "next", "javascript:void(0);").wi-icon.wi-icon-next
+    ul.paging
+      li.active
+        +link(0, "1", "javascript:void(0);").wi-icon.wi-icon-page
+      li
+        +link(0, "1", "javascript:void(0);").wi-icon.wi-icon-page

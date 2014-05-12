@@ -1,0 +1,22 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Folders"
+  - var bodyClass = "menu-multimedia"
+
+//------------------------
+//- Page content goes here
+//------------------------
+block header
+  include ../app-header/usb
+block content
+  section.usb-folders
+    include ../app-nav-list/multimedia-usb-folders
+    include ../app-audio/index
+
+block footer
+  +footer-default("multimedia-usb.html")

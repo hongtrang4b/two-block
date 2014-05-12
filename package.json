@@ -1,0 +1,56 @@
+{
+  "name": "renault-rlink",
+  "title": "Renault RLINK",
+  "description": "Mighty Made Project",
+  "version": "0.0.1",
+  "homepage": "https://github.digitas.fr/renault/renault-rlink",
+  "author": {
+    "name": "DIGITAS France",
+    "email": "frontend@digitas.fr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.digitas.fr:renault/renault-rlink.git"
+  },
+  "bugs": {
+    "url": "https://github.digitas.fr/renault/renault-rlink/issues"
+  },
+  "scripts": {
+    "start": "node app/server.js"
+  },
+  "preferredLanguage": "fr",
+  "dependencies": {
+    "express": "~3.4.8",
+    "jade": "~1.0.2"
+  },
+  "devDependencies": {
+    "matchdep": "~0.3.0",
+    "deferred": "~0.6.8",
+    "read": "~1.0.5",
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jade": "~0.9.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-notify": "~0.2.17",
+    "grunt-shell": "~0.6.4",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-nodemon": "~0.2.0",
+    "grunt-usemin": "~2.0.2",
+    "grunt-tagrelease": "~0.3.1",
+    "grunt-bumpup": "~0.5.0",
+    "grunt-conventional-changelog": "~1.0.0",
+    "grunt-open": "~0.2.3",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-contrib-coffee": "~0.9.0",
+    "grunt-contrib-compass": "~0.7.1",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-gh-pages": "~0.9.0"
+  }
+}

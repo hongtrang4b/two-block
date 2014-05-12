@@ -1,0 +1,22 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Onboard computer"
+  - var bodyClass = "onboard-computer"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-nav-list/onboard-computer
+
+block footer-center
+  +link("", "Clean", "javascript:void(0);", "Clean").btn.disabled
+
+block footer
+  include ../app-footer/vehicle

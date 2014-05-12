@@ -1,0 +1,36 @@
+include ../core/mixins/all
+
+-var items = [{"icon":"wi-icon wi-icon-callms","name":"Caroline Felini", "phone":"06 87 65 43 21", "time":"22:15" }, {"icon":"wi-icon wi-icon-callto","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"16:30" }, {"icon":"wi-icon wi-icon-callms","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"15:47" }, {"icon":"wi-icon wi-icon-callfrom","name":"Simoes De Almeida", "phone":"06 58 36 90 14", "time":"22 nov" }, {"icon":"wi-icon wi-icon-callms","name":"Daisy Wiston", "phone":"06 56 78 90 12", "time":"22 nov" }, {"icon":"wi-icon wi-icon-callto","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"16:30" }, {"icon":"wi-icon wi-icon-callms","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"15:47" }, {"icon":"wi-icon wi-icon-callfrom","name":"Simoes De Almeida", "phone":"06 58 36 90 14", "time":"22 nov" }];
+-var itemsMissing = [{"icon":"wi-icon wi-icon-callms","name":"Caroline Felini", "phone":"06 87 65 43 21", "time":"22:15" }, {"icon":"wi-icon wi-icon-callms","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"16:30" }, {"icon":"wi-icon wi-icon-callms","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"15:47" }, {"icon":"wi-icon wi-icon-callms","name":"Simoes De Almeida", "phone":"06 58 36 90 14", "time":"22 nov" }, {"icon":"wi-icon wi-icon-callms","name":"Daisy Wiston", "phone":"06 56 78 90 12", "time":"22 nov" }];
+-var itemsPlaced = [{"icon":"wi-icon wi-icon-callfrom","name":"Caroline Felini", "phone":"06 87 65 43 21", "time":"22:15" }, {"icon":"wi-icon wi-icon-callfrom","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"16:30" }];
+-var itemsRecieved = [{"icon":"wi-icon wi-icon-callto","name":"Caroline Felini", "phone":"06 87 65 43 21", "time":"22:15" }, {"icon":"wi-icon wi-icon-callto","name":"Benjamin Legrand", "phone":"06 12 34 56 78", "time":"16:30" }];
+
+section.call-logs-block(data-tab)
+  .tab-wrapper
+    .tab-content.active(data-scroll)
+      +link("","","javascript:void(0);", "Find").btn.btn-find
+      .scroll-block
+        .scroll-content
+          +list-calllogs(items)
+        aside.scroll-bar
+          .dragger
+      .tabs-control
+        +link("","","javascript:void(0);", "prev").btn-callogs-prev.disabled
+        +link("","","javascript:void(0);", "next").btn-callogs-next
+    .tab-content(data-scroll)
+      .scroll-block
+        .scroll-content
+          +list-calllogs(itemsPlaced)
+    .tab-content(data-scroll)
+      .scroll-block
+        .scroll-content
+          +list-calllogs(itemsMissing)
+    .tab-content(data-scroll)
+      .scroll-block
+        .scroll-content
+          +list-calllogs(itemsRecieved)
+  ul.tabs.calllogs-tabs-0
+      li.active: +link("","","javascript:void(0);", "All").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-callfrom","","javascript:void(0);", "").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-callms","","javascript:void(0);", "").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-callto","","javascript:void(0);", "").calllogs-tabs-btn

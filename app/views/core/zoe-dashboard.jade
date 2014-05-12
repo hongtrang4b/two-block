@@ -1,0 +1,25 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Dashboard"
+  - var bodyClass = "dashboard"
+//------------------------
+//- Page content goes here
+//------------------------
+
+block header
+  include ../app-header/zoe-dashboard
+
+block body-content
+  section#main
+    include ../app-zoe-dashbroad/index
+
+block footer-center
+  +link("wi-icon wi-icon-fav", "Favorite", "javascript:void(0);", "").btn
+
+block footer
+  include ../app-footer/dashboard

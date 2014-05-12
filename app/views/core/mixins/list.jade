@@ -1,0 +1,33 @@
+// icon, name, phone, time
+
+mixin list-calllogs(items)
+  ul.list-calllogs
+    each item in items
+      li
+        span.icon: em(class="#{item.icon}")
+        span.name:=item.name
+        span.phone:=item.phone
+        span.time:=item.time
+
+mixin list-weather(items)
+  ul.list-weather
+    each item,i in items
+      - active = (i==0) ? "active":"";
+      li.list-weather-item(class="#{active}")
+        span.list-weather-day:!=item.day
+        span.list-weather-icon01: em(class="#{item.icon01}")
+        span.list-weather-temp-to:!=item.tempTo
+        span.list-weather-temp-from:!=item.tempForm
+        span.list-weather-icon02: em(class="#{item.icon02}")
+
+mixin list-weather-text(items)
+  ul.weather-unit
+    each item,i in items
+      if i%2==0
+        li.weather-unit-item.even
+          span.weather-unit-status:!=item.status
+          span.weather-unit-unit:!=item.unit
+      else
+        li.weather-unit-item.odd
+          span.weather-unit-status:!=item.status
+          span.weather-unit-unit:!=item.unit

@@ -1,0 +1,9 @@
+include ../core/mixins/all
+header.header
+  +link("","","javascript:void(0);", "Radio FM 1").btn.btn-radio
+  nav.main-nav
+    ul
+      li: +link("wi-icon wi-icon-air","","#","").btn.btn-air
+      li: +link("wi-icon wi-icon-calllogs","","calllogs.html", "call").btn.btn-calllogs
+      li: +link("","","weather.html", "12<sup>o</sup>C").btn.btn-weather
+      li: +link("","","time-page.html", "16:33").btn.btn-time

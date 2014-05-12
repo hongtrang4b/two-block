@@ -1,0 +1,13 @@
+mixin popin(textTitle, desc)
+  - if(!textTitle){
+      .popin&attributes(attributes)
+          .inner
+            p!=desc
+            +link(0, "Close", "javascript:void(0);")(class="wi-icon wi-icon-close", data-close)
+  - }else{
+      .popin&attributes(attributes)
+          .inner
+            h2!=textTitle
+            p!=desc
+            +link(0, "Close", "javascript:void(0);")(class="wi-icon wi-icon-close", data-close)
+  -}

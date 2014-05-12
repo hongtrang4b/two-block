@@ -1,0 +1,18 @@
+extends ../_layouts/app-layout-home
+include mixins/all
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Outside air quality"
+  - var bodyClass = "outside-air-quality"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block body-content
+  section#main
+    include ../app-outside-air-quality/index

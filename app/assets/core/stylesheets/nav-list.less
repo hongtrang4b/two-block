@@ -1,0 +1,159 @@
+.nav-list {
+  margin-top: 21px;
+  li {
+    padding: 17px 14px;
+    .box-sizing(border-box);
+  }
+  a {
+    display: block;
+    color: @text-title;
+    font-size: 29px;
+    line-height: 1;
+    padding: 5px 0;
+  }
+  .songs-name {
+    a {
+      background: url('@{img-path}icon-songs.png') no-repeat left center;
+    }
+  }
+  .artists-name {
+    a {
+      background: url('@{img-path}icon-artists.png') no-repeat left center;
+    }
+  }
+  .folders-name {
+    a {
+      background: url('@{img-path}icon-folders.png') no-repeat left center;
+    }
+  }
+  .albums-name {
+    a {
+      background: url('@{img-path}icon-albums.png') no-repeat left center;
+    }
+  }
+}
+
+.nav-list-1 {
+  li {
+    background: url('@{img-path}line.png') no-repeat bottom center;
+    .clearfix();
+    &.last {
+      background: none;
+    }
+  }
+  .col {
+    float: left;
+    width: 57%;
+    padding: 0 7px;
+    font-size: 26px;
+    color: #ccc;
+    .box-sizing(border-box);
+    &:first-child {
+      width: 43%;
+    }
+  }
+}
+
+.menu-multimedia,
+.multimedia-usb-player {
+  .nav-list-1 {
+    margin-top: 4px;
+    li {
+      padding: 13px 17px;
+      background: url('@{img-path}line-usb.png') no-repeat top center;
+      &:first-child {
+        background: none;
+      }
+    }
+  }
+}
+
+.usb-albums-songs {
+  .nav-list {
+    a {
+      span {
+        display: inline-block;
+      }
+      .albums-name {
+        width: 80%;
+      }
+      .time-play {
+        float: right;
+      }
+    }
+  }
+}
+.usb-songs {
+  .nav-list {
+    a {
+      background: url('@{img-path}icon-songs.png') no-repeat left center;
+      padding-left: 38px;
+    }
+  }
+}
+.usb-albums {
+  .nav-list {
+    a {
+      background: url('@{img-path}icon-albums.png') no-repeat left center;
+      padding-left: 45px;
+    }
+  }
+}
+.usb-artists {
+  .nav-list {
+    a {
+      background: url('@{img-path}icon-artists.png') no-repeat left center;
+      padding-left: 44px;
+    }
+  }
+}
+.usb-folders {
+  .nav-list {
+    a {
+      background: url('@{img-path}icon-folders.png') no-repeat left center;
+      padding-left: 42px;
+    }
+  }
+  li:first-child {
+    a {
+      background: url('@{img-path}icon-songs.png') no-repeat 2px center;
+    }
+  }
+}
+
+.usb-songs {
+  .nav-list {
+    a {
+      display: block;
+      background: url('@{img-path}icon-songs.png') no-repeat left center;
+      padding-left: 38px;
+    }
+  }
+}
+
+.onboard-computer {
+  .nav-list {
+    margin-top: 5px;
+    li {
+      padding: 20px 10px;
+    }
+  }
+}
+
+.player-content {
+  position: relative;
+  .clearfix();
+  .nav-list {
+    margin-top: 28px;
+    li {
+      padding: 13px 14px;
+    }
+    a {
+      padding-left: 42px;
+    }
+  }
+}
+
+.takecare .nav-list {
+  .not-selectable();
+}

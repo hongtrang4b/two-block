@@ -1,0 +1,15 @@
+mixin link-text(title, href, text01, text02)
+  - if (typeof(href) === "undefined") href="#"
+  - if (typeof(text01) === "undefined") text01=title;
+  - if(typeof(text02)=== "undefined"){
+  a(href="#{href}", title="#{title}")&attributes(attributes)!=text01
+  - } else {
+  a(href="#{href}", title="#{title}")&attributes(attributes)
+    span.sub-text!=text02
+    span!=text01
+  - }
+
+mixin item-text(text01, text02)
+  span&attributes(attributes)
+    span.sub-text!=text01
+    span!=text02

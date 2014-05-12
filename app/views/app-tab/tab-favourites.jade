@@ -1,0 +1,45 @@
+include ../core/mixins/all
+
+section.favourites-block(data-tab)
+  .tab-wrapper
+    .tab-content.active
+      h2.title Favourites - Navigation
+      ul.list-item
+        li: +menu-item("upload/fav-nav-1.png", "Home", "range-selection.html")
+        li.disabled: +menu-item("upload/fav-nav-1.png", "53 avenue des Champs Elysées...")
+        li.disabled: +menu-item("upload/fav-nav-1.png", "Piccadilly Circus, Westminster...")
+        li.disabled: +menu-item("upload/fav-nav-1.png", "Plaza Puerta del Sol, Madrid, Spain")
+        li.disabled: +menu-item("upload/fav-nav-2.png")
+        li.disabled: +menu-item("upload/fav-nav-2.png")
+    .tab-content
+      h2.title Favourites - Media
+      ul.list-item
+        li: +menu-item("upload/multimedia-radio.png", "Arrow", "radio.html")
+        li.disabled: +menu-item("upload/multimedia-radio.png", "Jazz FM")
+        li.disabled: +menu-item("upload/multimedia-radio.png", "Radio Pop")
+        li: +menu-item("upload/fav-media-2.png")
+        li.disabled: +menu-item("upload/fav-media-2.png")
+        li.disabled: +menu-item("upload/fav-media-2.png")
+    .tab-content
+      h2.title Favourites - Phone
+      ul.list-item
+        li: +menu-item("upload/phone-voice.png", "Voice mail", "menu-phone.html")
+        li.disabled: +menu-item("upload/fav-phone-2.png", "Benjamin Legrand")
+        li.disabled: +menu-item("upload/fav-phone-2.png", "Sang Hong")
+        li: +menu-item("upload/fav-phone-3.png")
+        li.disabled: +menu-item("upload/fav-phone-3.png")
+        li.disabled: +menu-item("upload/fav-phone-3.png")
+    .tab-content
+      h2.title Favourites - Serviecs
+      ul.list-item
+        li: +menu-item("upload/services-michelin.png", "Michelin Restaurants", "menu-services.html")
+        li: +menu-item("upload/services-email.png", "eMail", "menu-services.html")
+        li: +menu-item("upload/services-tweet.png", "R‐Link tweet")
+        li: +menu-item("upload/fav-services-4.png")
+        li.disabled: +menu-item("upload/fav-services-4.png")
+        li.disabled: +menu-item("upload/fav-services-4.png")
+  ul.tabs.calllogs-tabs-0
+      li.active: +link("wi-icon wi-icon-nav","","javascript:void(0);").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-media","","javascript:void(0);").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-phone","","javascript:void(0);").calllogs-tabs-btn
+      li: +link("wi-icon wi-icon-services","","javascript:void(0);").calllogs-tabs-btn

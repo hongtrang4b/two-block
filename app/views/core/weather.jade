@@ -1,0 +1,23 @@
+extends ../_layouts/app-layout-app
+//---------------------------
+//- Global template variables
+//---------------------------
+block variables
+  - var title = "Weather"
+  - var bodyClass = "weather"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block header
+  include ../app-header/index
+
+block body-content
+  include ../app-weather/index
+
+block footer
+  footer.footer
+    .inner
+      ul.footer-control
+        li: +link("wi-icon wi-icon-back","","dashboard.html").btn.btn-back

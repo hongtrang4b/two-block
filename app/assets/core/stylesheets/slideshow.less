@@ -1,0 +1,56 @@
+.slideshow {
+  position: relative;
+  height: 332px;
+  .preview {
+    overflow: hidden;
+    width: 678px;
+    margin: 0 auto;
+  }
+  .slider {
+    position: relative;
+    width: 678px;
+    height: 332px;
+    > li {
+      position: absolute;
+      top: 0;
+      left: 678px;
+      &:first-child {
+        left: 0;
+      }
+    }
+    li {
+      float: left;
+    }
+  }
+  .paging,
+  .control .wi-icon {
+    position: absolute;
+  }
+  .control .wi-icon {
+    top: 50%;
+    margin-top: -32px;
+  }
+  .wi-icon-prev {
+    left: 0;
+  }
+  .wi-icon-next {
+    right: 0;
+  }
+  .paging {
+    text-align: center;
+    font-size: 0;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    li {
+      display: inline-block;
+      font-size: 11px;
+    &.active {
+      .wi-icon-page {
+        background-position: right top;
+        .opacity(1);
+      }
+    }
+    }
+  }
+}

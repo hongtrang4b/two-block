@@ -1,0 +1,18 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Phone"
+  - var bodyClass = "menu-phonebook"
+
+//------------------------
+//- Page content goes here
+//------------------------
+block content
+  include ../app-menu/menu-phone
+
+block footer
+  +footer-default("main-menu.html")

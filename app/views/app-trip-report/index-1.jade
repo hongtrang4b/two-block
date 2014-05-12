@@ -1,0 +1,38 @@
+include ../core/mixins/all
+
+mixin data(text1, text2, value)
+  .data
+    | #{text1}
+    span!=text2
+  .value!=value
+section.main-content
+  h3.title-3
+    | Distance: 20&nbsp;
+    span km
+    | &nbsp;- Duration: 0&nbsp;
+    span h&nbsp;
+    | 25&nbsp;
+    span m
+  .trip-block
+    .col
+      ul.list-1
+        li: +data("Average consumption", "L / 100 km", "3.4")
+        li: +data("Total consumption", "L", "0.7")
+        li: +data("Average speed", "KM/h", "48.2")
+        li: +data("Without consumption", "km", "0.3")
+    .col.col-1
+      ul.list-2
+        li
+          .item.item-1
+            .inner
+              | 68&nbsp;
+              span / 100
+        li
+          .item.item-3
+            .inner Acceleration
+        li
+          .item.item-4
+            .inner Gear changes
+        li
+          .item.item-5
+            .inner Anticipation

@@ -1,0 +1,23 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Trip Report"
+  - var bodyClass = "trip-report"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-trip-report/index-1
+
+block footer-center
+  +link("", "Save", "javascript:void(0);", "Save").btn.disabled
+  +link("", "Reset", "javascript:void(0);", "Reset").btn.disabled
+
+block footer
+  include ../app-footer/vehicle-driving

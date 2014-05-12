@@ -1,0 +1,31 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Example Page"
+
+//----------------
+//- Modules assets
+//----------------
+
+block modules-css
+  // build:css stylesheets/app-sample.min.css
+  link(href="stylesheets/app-sample.css", rel="stylesheet")
+  // endbuild
+
+block modules-js
+  // build:js javascripts/app-sample.min.js
+  script(src="javascripts/app-sample.js")
+  // endbuild
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  p.lead Hello World! This is an example page.
+  p You always need to manually include modules assets on pages.
+  p Take a look at the JADE source

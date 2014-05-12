@@ -1,0 +1,58 @@
+.title,
+.title-1,
+.title-2,
+.title-3 {
+  font-weight: normal;
+  letter-spacing: 0.22px;
+  .not-selectable();
+}
+.title-1,
+.title-2 {
+  
+}
+.title {
+  font-size: 32px;
+  line-height: 52px;
+  color: @text-title;
+  padding-top: 10px;
+  &.title-usb {
+    background: url('@{img-path}icon-usb.png') no-repeat 8px 26px;
+    padding-left: 56px;
+  }
+  &.title-bluetooth {
+    background: url('@{img-path}icon-bluetooth.png') no-repeat 8px 13px;
+    padding-left: 60px;
+  }
+}
+
+.title-1 {
+  font-size: 28px;
+  margin: 16px 0 0 17px;
+}
+
+.title-2 {
+  font-size: 40px;
+  text-align: center;
+}
+.title-3 {
+  padding: 10px 0;
+  font-size: 26px;
+  color: #ccc;
+  text-align: center;
+  span {
+    font-size: 20px;
+  }
+}
+
+.multimedia-usb-player,
+.multimedia-bluetooth-player {
+  .title {
+    float: left;
+  }
+}
+
+.favourites-block {
+  .title {
+    padding: 10px 13px 0;
+  }
+}

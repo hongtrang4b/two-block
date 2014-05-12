@@ -1,0 +1,35 @@
+include ../core/mixins/all
+section.scheduler.scheduler-2
+  .scheduler-content
+    .col.checked
+      .content
+        .item.item-2
+          p.row-1 Off
+          p.row-2
+            span.wi-icon.wi-icon-off &nbsp;
+        .custom: span.wi-icon.wi-icon-check &nbsp;
+    .col
+      .content
+        .item.item-2
+          p.row-1 Time 1
+          p.row-2
+            span.wi-icon.wi-icon-time &nbsp;
+            span 07:30
+        +link(0, "Select", "comfort-timer-2.html").btn-select
+      .link
+        +link(0, "Edit").btn-3.disabled
+    .col
+      .content
+        .item.item-2
+          p.row-1 Time 2
+          p.row-2
+            span.wi-icon.wi-icon-time &nbsp;
+            span 18:00
+        +link(0, "Select", "comfort-timer-3.html").btn-select
+      .link
+        +link(0, "Edit").btn-3.style-1.disabled
+  .summary
+    p
+      | Comfort timer is turned off.
+      br
+      | Comfort timer only works if the vehicle is connected to a power source.

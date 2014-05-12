@@ -1,0 +1,28 @@
+#no-portrait {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  p {
+    position: absolute;
+    color: #f7b100;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    margin-top: -16px;
+  }
+}
+
+@media (orientation : portrait) and (max-aspect-ratio: 13/9) {
+  #no-portrait {
+    display: block;
+  }
+}

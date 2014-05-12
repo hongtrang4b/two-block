@@ -1,0 +1,11 @@
+include ../core/mixins/all
+aside.sidebar
+  section.player
+    a(href="radio.html", title="")
+      span.player-channel FM1
+      span.player-control Preset
+      span.player-display 2.BNR - Dancefloor
+  section.driving
+    +link-img("driving-img.png", "Driving status", "Status", "#", "Driving Eco<sup>2</sup>").driving-status
+section.maps
+  +link-img("current_map.png", "Current maps", "Map", "#", "")

@@ -1,0 +1,19 @@
+extends ../_layouts/app-layout-home
+
+//---------------------------
+//- Global template variables
+//---------------------------
+
+block variables
+  - var title = "Multimedia"
+  - var bodyClass = "menu-multimedia"
+
+//------------------------
+//- Page content goes here
+//------------------------
+
+block content
+  include ../app-menu/menu-multimedia
+
+block footer
+  +footer-default("main-menu.html")

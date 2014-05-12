@@ -1,0 +1,8 @@
+include ../core/mixins/all
+section.main-content
+  ul.list-item
+    li: +menu-item("upload/multimedia-radio.png", "Radio", "multimedia-radio.html")
+    li: +menu-item("upload/multimedia-media.png", "Media", "multimedia-media.html")
+    li: +menu-item("upload/multimedia-pictures.png", "Pictures", "multimedia-pictures.html")
+    li: +menu-item("upload/multimedia-video.png", "Video", "multimedia-video.html")
+    li.disabled: +menu-item("upload/multimedia-setting.png", "Settings")

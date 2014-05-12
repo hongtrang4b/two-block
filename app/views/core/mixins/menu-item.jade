@@ -1,0 +1,13 @@
+mixin menu-item(imageLink, title, href, text)
+  - if (typeof(href) === "undefined") href="#"
+  - if (typeof(text) === "undefined") text=title;
+  - if (!imageLink){
+    a.text(href="#{href}", title="#{title}")&attributes(attributes)!=text
+  - }else if(text != ""){
+    a.photo(href="#{href}", title="#{title}")&attributes(attributes)
+      img(src="images/app/#{imageLink}", alt="")
+    a.text(href="#{href}", title="#{title}")!=text
+  - }else {
+    a.photo(href="#{href}", title="#{title}")&attributes(attributes)
+      img(src="images/app/#{imageLink}", alt="")
+  - }
