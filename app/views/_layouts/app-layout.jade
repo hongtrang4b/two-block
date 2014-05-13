@@ -2,9 +2,10 @@ include ../core/mixins/all
 
 block variables
 
-- if(typeof bodyClass === "undefined"){ bodyClass = null }
 - if(typeof title     === "undefined"){ title     = "Mighty Made" }
 - if(typeof appcache  === "undefined"){ appcache  = null }
+- if(typeof modules   === "undefined") modules= []
+//- - if(typeof bodyClass === "undefined"){ bodyClass = null }
 
 doctype html
 //[if IE 8]><html lang="fr" class="no-js old-ie ie8"><![endif]
@@ -46,11 +47,11 @@ html(class="no-js", lang="en", appcache=appcache)
   body(class=bodyClass)
 
     #app
-      block header
+      //- block header
 
-      block body-content
+      #main: block content
 
-      block footer
+      //- block footer
 
     // build:js javascripts/libs/vendor.min.js
     script(src="javascripts/libs/vendor.js")

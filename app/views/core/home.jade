@@ -4,11 +4,11 @@ extends ../_layouts/app-layout-home
 //---------------------------
 
 block variables
-  - var title = "Main menu"
-  - var mainApp = "main-home"
+  - title = "Main menu"
+  - modules= ['app-week']
 
 //------------------------
 //- Page content goes here
 //------------------------
 block content
-  include ../app-menu/menu-main
+  include ../app-week/index
