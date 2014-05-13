@@ -1,0 +1,72 @@
+@import "../../core/stylesheets/variables.less";
+@import "../../core/stylesheets/mixins.less";
+
+/* ===================
+ * header/app.less
+ * =================== */
+
+.practice-block {
+  overflow: hidden;
+  max-width: 950px;
+  margin: 0 auto;
+  color: white;
+  > ul {
+    overflow: hidden;
+    margin: 0 -8px;
+    > li {
+      float: left;
+      width: 33.33%;
+      padding: 0 8px;
+      text-align: center;
+      .box-sizing(border-box);
+    }
+  }
+  article {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    &.block-1 {
+      background-color: #27ae60;
+    }
+    &.block-2 {
+      background-color: white;
+      color: #838383;
+      .item .title {
+        color: #838383;
+      }
+    }
+    &.block-3 {
+      background-color: #f19f0f;
+    }
+  }
+  .item {
+    .title {
+      position: relative;
+      padding: 15px 35px;
+      font-size: 1em;
+      background: url('@{img-path}bgd-item-opt-30.png');
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        .size(12px, 6px);
+        margin-left: -6px;
+        background: url('@{img-path}arrow-week-1.png');
+        // border-width: 6px 6px 0;
+        // border-style: solid;
+      }
+    }
+    .desc {
+      padding: 15px 35px;
+      font-size: 0.857em;
+    }
+    &.item-1 {
+      .title {
+        font-size: 1.143em;
+      }
+      .desc {
+        font-size: 1em;
+      }
+    }
+  }
+}

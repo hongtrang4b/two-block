@@ -1,0 +1,207 @@
+mixin rowTitle(title)
+  tr
+    td.title(colspan="17"): strong!=title
+mixin rowContent(obj)
+  tr(class=obj.clss, attributes)
+    - if (obj.clss === "template") {
+      td.number!=obj.no
+      td.psd!=obj.psd
+      td.file: a(href="obj.href", title="")!=obj.link
+    - } else {
+      td(colspan="3")!=obj.comment
+    - }
+    td.status!=obj.stt
+    td.date!=obj.date
+    td.validated!=obj.vIE
+    td.validated!=obj.vFirefox
+    td.validated!=obj.vChrome
+    td.validated!=obj.vSafari
+    td.validated!=obj.vOpera
+    td.validated!=obj.vIOS
+    td.validated!=obj.vAndroid
+    td.validated!=obj.vWindowsphone
+    td.validated!=obj.vPixelPerfect
+    td.validated!=obj.vW3Schools
+    td.staff!=obj.Staff
+    td.checked!=obj.Checked
+
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Sitemap
+    style.
+      //- .task {display: none;}
+      .task.active {display: block;}
+      a {display: block; color: #444; text-decoration: none;}
+      a:hover {color: #F36F21;}
+      //- a:after {content: ' // ' attr(href)}
+
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 11px;
+        color: #444;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      .table {
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      .table caption {
+        padding: 20px 10px;
+        font-weight: bold;
+        font-size: 25px;
+        color: #F36F21;
+        text-transform: uppercase;
+      }
+      .table tr > th,
+      .table tr > td {
+        padding: 5px 3px;
+        line-height: 1.428571429;
+        vertical-align: top;
+        border-bottom: 1px solid #F36F21;
+      }
+
+      .table thead > tr > th {
+        font-size: 12px;
+      }
+      .table thead tr:first-child th {
+        //- border-top: 0;
+        vertical-align: middle;
+        border-top: 2px solid #f36f21;
+      }
+
+
+      .table .template > td:first-child {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDBDOUFCNEYyQ0FGMTFFM0FCMUM5MTkwM0QwOUJCNjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDBDOUFCNTAyQ0FGMTFFM0FCMUM5MTkwM0QwOUJCNjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMEM5QUI0RDJDQUYxMUUzQUIxQzkxOTAzRDA5QkI2MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMEM5QUI0RTJDQUYxMUUzQUIxQzkxOTAzRDA5QkI2MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj5/52wAAACGSURBVHjaYnRxceFgYGCYDMTrdu/evZ0BCTAB8VYgTgHi5a6urmboktegbH4gPgBUYAWTZPz//z8DUKACyG6Hiv0CYiegFUfBkiAAVBAFpJYimRrKxIAHsEB1YTcW6BWQN3KgEt+B2AUocQzmWi2oxEcgdoBJwCS9gXgOEEcCJU4h2wkQYABZLy0qa/KvIgAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-position: 4px center;
+      }
+      .table .template.active > td:first-child {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADImlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMEM5QUI0RjJDQUYxMUUzQUIxQzkxOTAzRDA5QkI2MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowMEM5QUI1MDJDQUYxMUUzQUIxQzkxOTAzRDA5QkI2MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwQzlBQjREMkNBRjExRTNBQjFDOTE5MDNEMDlCQjYxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAwQzlBQjRFMkNBRjExRTNBQjFDOTE5MDNEMDlCQjYxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Pn/nbAAAAJNJREFUKFNjdHFx4WBgYNgKxNd2796dC6ThwNXVdTKQowXE3kxAAsRxAuIcoEQFTBWUnQOVm8wINNETyFkOxPxQRdFQeimU/gikIxn////PANRtBuQcAGJOZKuB7O9A7AB00imQ1QwgBpByAeJfSApBbBeoHAPYRCR3WQPZR6B8G6CiozA5FIUgQaAzQqC2rEF2BgDR8zBsD/wSJgAAAABJRU5ErkJggg==);
+      }
+
+
+      .table .template > td,
+      .table .template > th {
+        background-color: #fee9c8;
+      }
+      .table tr > td,
+      .table tr > th {
+        border-left: 1px solid #F36F21;
+      }
+
+      .table tr > td:first-child,
+      .table tr > th:first-child {
+        border-left: none;
+      }
+      .table tr > th.validated {
+        border-top: 1px solid #F36F21;
+        border-left: 1px solid #F36F21;
+      }
+
+      .table .title {padding: 7px 10px; border-top: 1px solid #F36F21;}
+      .table .title strong {font-size: 20px; color: #F36F21;}
+      .table .number {width: 35px; text-align: center;}
+      .table td.number {padding-left: 12px; padding-right: 6px; text-align: right;}
+      .table .template {width: 80px;}
+      .table .psd {width: 150px;}
+      .table .file {width: 200px;}
+      .table .status {width: 120px;}
+      .table .date {width: 75px; text-align: center;}
+      .table .validated {width: 30px; text-align: center;}
+      .table .staff {width: 100px;}
+      .table .checked {width: 100px;}
+
+      .table.table-1 {
+        width: auto;
+        margin: 50px 20px;
+      }
+      //- .table.table-1 th {
+      //-   font-size: 16px;
+      //-   text-transform: uppercase;
+      //- }
+      .table.table-1 td {
+        padding: 7px 20px;
+        border: 1px solid #F36F21 !important;
+      }
+  body
+    table.table
+      caption PROJECT NAME
+      thead
+        tr
+          th.number(rowspan="2") No.
+          th.psd(rowspan="2") PSD
+          th.file(rowspan="2") File
+          th.status(rowspan="2") Status
+          th.date(rowspan="2") Date
+          th(colspan="10") Validation
+          th.staff(rowspan="2") Staff
+          th.checked(rowspan="2") Checked by
+        tr
+          th.validated IE 8+
+          th.validated(title="3 latest version") FF
+          th.validated(title="3 latest version") CH
+          th.validated(title="3 latest version") SF
+          th.validated O
+          th.validated IOS 6+
+          th.validated(title="Android 4.1+") ARD 4.1+
+          th.validated(title="Windows Phone 7+") WD 7+
+          th.validated(title="Pixel Perfect") PP
+          th.validated(title="W3C Validated") W3C
+      //- tfoot
+      //-   tr
+      //-     td(colspan='11')
+      tbody
+        //---- DESKTOP ----//
+        +rowTitle("Desktop")
+        //---------- Homepage ----------//
+        +rowContent({clss: "template", no: 1, psd: "D_homepage.psd", href: "desktop/homepage.html", link: "homepage.html", stt: "Cutting Template", date: "25/11/13", vIE: "Y", vFirefox: "N", vChrome: "N", vSafari: "N", vOpera: "N", vIOS: "N", vAndroid: "N", vWindowsphone: "N", vPixelPerfect: "N", vW3Schools: "N", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "HTML: Cutting slideshow", stt: "Checked and validated", date: "24/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "Cutting block 1", stt: "Cutting Template", date: "24/11/13", vIE: "Y", vFirefox: "N", vChrome: "N", vSafari: "N", vOpera: "N", vIOS: "N", vAndroid: "N", vWindowsphone: "N", vPixelPerfect: "N", vW3Schools: "N", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "Cutting block 1", stt: "Checked and validated", date: "25/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Duy Phan", Checked: ""})
+        //---------- Contact ----------//
+        +rowContent({clss: "template", no: 2, psd: "D_Homepage.psd", href: "desktop/homepage.html", link: "homepage.html", stt: "Cutting Template", date: "25/11/13", vIE: "Y", vFirefox: "N", vChrome: "N", vSafari: "N", vOpera: "N", vIOS: "N", vAndroid: "N", vWindowsphone: "N", vPixelPerfect: "N", vW3Schools: "N", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "HTML: Cutting slideshow", stt: "Checked and validated", date: "24/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "JS:<br>Dropdown<br>Slideshow", stt: "Checked and validated", date: "24/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+
+
+        //---- TABLET ----//
+        +rowTitle("Tablet")
+        //---------- Homepage ----------//
+        +rowContent({clss: "template", no: 1, psd: "T_homepage.psd", href: "tablet/homepage.html", link: "homepage.html", stt: "Cutting Template", date: "25/11/13", vIE: "Y", vFirefox: "N", vChrome: "N", vSafari: "N", vOpera: "N", vIOS: "N", vAndroid: "N", vWindowsphone: "N", vPixelPerfect: "N", vW3Schools: "N", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "HTML: Cutting slideshow", stt: "Checked and validated", date: "24/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+
+
+        //---- MOBILE ----//
+        +rowTitle("Mobile")
+        //---------- Homepage ----------//
+        +rowContent({clss: "template", no: 1, psd: "M_homepage.psd", href: "mobile/homepage.html", link: "homepage.html", stt: "Cutting Template", date: "25/11/13", vIE: "Y", vFirefox: "N", vChrome: "N", vSafari: "N", vOpera: "N", vIOS: "N", vAndroid: "N", vWindowsphone: "N", vPixelPerfect: "N", vW3Schools: "N", Checked: "Dung Huynh"})
+        +rowContent({clss: "task", comment: "HTML: Cutting slideshow", stt: "Checked and validated", date: "24/11/13", vIE: "Y", vFirefox: "Y", vChrome: "Y", vSafari: "Y", vOpera: "Y", vIOS: "Y", vAndroid: "Y", vWindowsphone: "Y", vPixelPerfect: "Y", vW3Schools: "Y", Staff: "Trang Nguyen", Checked: "Dung Huynh"})
+
+
+
+
+
+    table.table.table-1
+      caption Status
+      tr: td Read spec + Analysis
+      tr: td Creation approved
+      tr: td Waiting for PSD
+      tr: td Pending for more information
+      tr: td Cutting template
+      tr: td Modify follow new PSD
+      tr: td Code integrated
+      tr: td Checked and validated

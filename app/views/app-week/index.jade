@@ -3,47 +3,60 @@ include ../core/mixins/all
 section.week-block
   table
     caption 2014
-    tr
-      th.col-1
-        | MONDAY
-        span 05/05
-      th.col-2
-        | TUESDAY
-        span 06/05
-      th.col-3
-        | WEDNESDAY
-        span 07/05
-      th.col-4
-        | THURSDAY
-        span 08/05
-      th.col-5
-        | FRIDAY
-        span 09/05
-      th.col-6
-        | SARTURDAY
-        span 10/05
-      th.col-7
-        | SUNDAY
-        span 11/05
-    tr
-      td.col-1
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-2
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-3
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-4
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-5
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-6
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
-      td.col-7
-        ul
-          li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+    thead
+      tr
+        th.col-1
+          span.heading
+            | MONDAY
+            span 05/05
+        th.col-2
+          span.heading
+            | TUESDAY
+            span 06/05
+        th.col-3
+          span.heading
+            | WEDNESDAY
+            span 07/05
+        th.col-4
+          span.heading
+            | THURSDAY
+            span 08/05
+        th.col-5
+          span.heading
+            | FRIDAY
+            span 09/05
+        th.col-6
+          span.heading
+            | SARTURDAY
+            span 10/05
+        th.col-7
+          span.heading
+            | SUNDAY
+            span 11/05
+    tbody
+      tr
+        td.col-1
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-2
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-3
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-4
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-5
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-6
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
+        td.col-7
+          ul
+            li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")

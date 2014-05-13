@@ -1,7 +1,8 @@
 mixin item(icon, title, time, location)
   a(href="#", title="")
-    span(class="icon icon-#{icon}")!=title
-    span.desc
-      span.title!=title
-      span.time!time
+    span.item
+      span(class="icon icon-#{icon}")!=title
+      span.desc
+        span.title!=title
+        span.time!=time
     span.location!=location

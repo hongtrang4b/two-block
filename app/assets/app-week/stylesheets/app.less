@@ -6,33 +6,99 @@
  * =================== */
 
 .week-block {
-  background: url('@{img-path}bg-header.png') center 0 repeat-x;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 5px;
+  color: white;
+  background: url('@{img-path}bgd-week.png');
+  border-radius: 8px;
+  table {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+  }
+  caption {
+    padding: 5px;
+    background-color: #6483a2;
+    // border-radius: 4px 4px 0 0;
+  }
   th {
+    position: relative;
+    z-index: 100;
+    width: 14.285%;
+    padding: 17px 5px 15px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      .size(12px, 6px);
+      margin-left: -6px;
+      // border-width: 6px 6px 0;
+      // border-style: solid;
+    }
+    span {
+      display: block;
+    }
     &.col-1 {
       background-color: #1dd2af;
+      &:before {
+        // border-color: #1dd2af transparent transparent;
+        background: url('@{img-path}arrow-week-1.png');
+      }
+      span {
+        color: #197d6a;
+      }
     }
     &.col-2 {
       background-color: #2ecc71;
+      span {
+        color: #0c6934;
+      }
     }
     &.col-3 {
       background-color: #3498db;
+      span {
+        color: #0b4063;
+      }
     }
     &.col-4 {
       background-color: #246fa2;
+      span {
+        color: #041e2f;
+      }
     }
     &.col-5 {
       background-color: #2980b9;
+      span {
+        color: #6eb8e8;
+      }
     }
     &.col-6 {
       background-color: #27ae60;
+      span {
+        color: #0a5a2c;
+      }
     }
     &.col-7 {
       background-color: #16a085;
+      span {
+        color: #40dabc;
+      }
     }
   }
   td {
+    // width: 14.285%;
+    padding: 0 0 5px;
+    vertical-align: top;
+    span {
+      color: white;
+    }
     &.col-1 {
       background: #73e3ce url('@{img-path}bgd-week-1.png') no-repeat 100% 0;
+      .desc {
+        overflow: hidden;
+      }
     }
     &.col-2 {
       background: #7ee0a8 url('@{img-path}bgd-week-2.png') no-repeat 100% 0;
@@ -41,7 +107,7 @@
       background: #82bfe9 url('@{img-path}bgd-week-3.png') no-repeat 100% 0;
     }
     &.col-4 {
-      background: #a0c1d7 url('@{img-path}bgd-week-4.png') no-repeat 100% 0;
+      background: #77a6c5 url('@{img-path}bgd-week-4.png') no-repeat 100% 0;
     }
     &.col-5 {
       background: #7bb0d3 url('@{img-path}bgd-week-5.png') no-repeat 100% 0;
@@ -51,6 +117,50 @@
     }
     &.col-7 {
       background: #6fc4b4 url('@{img-path}bgd-week-7.png') no-repeat 100% 0;
+    }
+  }
+  ul {
+    a {
+      overflow: hidden;
+      display: block;
+      max-width: 100%;
+      // max-width: 110px;
+      margin: 0 auto;
+      background: url('@{img-path}bgd-item-opt-30.png');
+      &:hover {
+        background: url('@{img-path}bgd-item-opt-60.png');
+        .location {
+          background: url('@{img-path}bgd-item-opt-80.png');
+        }
+      }
+      .item {
+        display: block;
+        padding: 15px 5px;
+      }
+      .icon {
+        float: left;
+        margin-right: 10px;
+      }
+      .desc {
+        overflow: hidden;
+        display: block;
+      }
+      .title {
+        display: block;
+      }
+      .time {
+        display: block;
+        margin-top: 3px;
+        color: #bb0332;
+      }
+      .location {
+        display: block;
+        padding: 8px 5px;
+        font-size: 0.786em;
+        text-align: center;
+        color: #8d8e8e;
+        background: url('@{img-path}bgd-item-opt-30.png');
+      }
     }
   }
 }
