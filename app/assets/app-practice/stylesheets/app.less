@@ -30,8 +30,21 @@
     &.block-2 {
       background-color: white;
       color: #838383;
-      .item .title {
-        color: #838383;
+      .item {
+        .title {
+          color: #838383;
+          background-color: #f4f4f4;
+          &:before {
+            background-image: url('@{img-path}arrow-practice-2.png');
+          }
+        }
+        .title-2 {
+          border-color: #e5e5e5;
+          &:before {
+            bottom: -6px;
+            background-image: url('@{img-path}arrow-practice-3.png');
+          }
+        }
       }
     }
     &.block-3 {
@@ -44,14 +57,18 @@
       padding: 15px 35px;
       font-size: 1em;
       background: url('@{img-path}bgd-item-opt-30.png');
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: transparent;
+      .box-sizing(border-box);
       &:before {
         content: '';
         position: absolute;
         left: 50%;
-        bottom: -6px;
+        bottom: -7px;
         .size(12px, 6px);
         margin-left: -6px;
-        background: url('@{img-path}arrow-week-1.png');
+        background: url('@{img-path}arrow-practice-1.png') no-repeat;
         // border-width: 6px 6px 0;
         // border-style: solid;
       }
