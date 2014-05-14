@@ -3,60 +3,67 @@ include ../core/mixins/all
 section.week-block
   table
     caption 2014
-    thead
-      tr
-        th.col-1
-          span.heading
-            | MONDAY
-            span 05/05
-        th.col-2
-          span.heading
-            | TUESDAY
-            span 06/05
-        th.col-3
-          span.heading
-            | WEDNESDAY
-            span 07/05
-        th.col-4
-          span.heading
-            | THURSDAY
-            span 08/05
-        th.col-5
-          span.heading
-            | FRIDAY
-            span 09/05
-        th.col-6
-          span.heading
-            | SARTURDAY
-            span 10/05
-        th.col-7
-          span.heading
-            | SUNDAY
-            span 11/05
+    //- thead
+    //-   tr
+    //-       th.col-1
+    //-       th.col-2
+    //-       th.col-3
+    //-       th.col-4
+    //-       th.col-5
+    //-       th.col-6
+    //-       th.col-7
     tbody
       tr
         td.col-1
+          .heading
+              //- span.heading
+              | MONDAY
+              span 05/05
           ul
             li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
             li: +item("bike", "RUN", "4 : 00 PM", "Rec Center")
         td.col-2
+          .heading
+              //- span.heading
+              | TUESDAY
+              span 06/05
           ul
             li: +item("run", "RUN", "4 : 00 PM", "Track")
         td.col-3
+          .heading
+              //- span.heading
+              | WEDNESDAY
+              span 07/05
           ul
             li: +item("bike", "RUN", "4 : 00 PM", "Track")
             li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
         td.col-4
+          .heading
+              //- span.heading
+              | THURSDAY
+              span 08/05
           ul
             li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")
             li: +item("run", "RUN", "4 : 00 PM", "Track")
             li: +item("bike", "BIKE", "4 : 00 PM", "Rec Center")
         td.col-5
+          .heading
+              //- span.heading
+              | FRIDAY
+              span 09/05
           ul
             li: +item("run", "RUN", "4 : 00 PM", "Track")
         td.col-6
+          .heading
+              //- span.heading
+              | SARTURDAY
+              span 10/05
           ul
             li: +item("bike", "BIKE", "4 : 00 PM", "Rec Center")
         td.col-7
+          .heading
+              //- span.heading
+              | SUNDAY
+              span 11/05
           ul
             li: +item("swim", "SWIM", "6 : 00 PM", "Mott/Anderson Pool")

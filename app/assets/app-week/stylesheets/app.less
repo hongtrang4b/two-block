@@ -7,7 +7,7 @@
 
 .week-block {
   max-width: 950px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 5px;
   color: white;
   text-align: center;
@@ -20,19 +20,23 @@
     border-radius: 4px;
   }
   caption {
-    padding: 5px;
+    padding: 3px 5px;
     // font-family: @MyriadProBold;
     font-size: 1.286em;
     font-weight: bold;
     background-color: #6483a2;
     // border-radius: 4px 4px 0 0;
   }
-  th {
+  .heading {
     position: relative;
     z-index: 100;
-    width: 14.285%;
+    display: block;
+    // width: 14.285%;
+    height: 60px;
     padding: 17px 5px 15px;
+    text-align: center;
     // font-family: @MyriadProRegular;
+    .box-sizing(border-box);
     &:before {
       content: '';
       position: absolute;
@@ -40,113 +44,137 @@
       bottom: -6px;
       .size(12px; 6px);
       margin-left: -6px;
+      background-repeat: no-repeat;
       // border-width: 6px 6px 0;
       // border-style: solid;
     }
     span {
       display: block;
     }
-    &.col-1 {
-      background-color: #1dd2af;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-1.png');
-      }
-      span {
-        color: #197d6a;
-      }
-    }
-    &.col-2 {
-      background-color: #2ecc71;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-2.png');
-      }
-      span {
-        color: #0c6934;
-      }
-    }
-    &.col-3 {
-      background-color: #3498db;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-3.png');
-      }
-      span {
-        color: #0b4063;
-      }
-    }
-    &.col-4 {
-      background-color: #246fa2;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-4.png');
-      }
-      span {
-        color: #041e2f;
-      }
-    }
-    &.col-5 {
-      background-color: #2980b9;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-5.png');
-      }
-      span {
-        color: #6eb8e8;
-      }
-    }
-    &.col-6 {
-      background-color: #27ae60;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-6.png');
-      }
-      span {
-        color: #0a5a2c;
-      }
-    }
-    &.col-7 {
-      background-color: #16a085;
-      &:before {
-        // border-color: #1dd2af transparent transparent;
-        background: url('@{img-path}arrow-week-7.png');
-      }
-      span {
-        color: #40dabc;
-      }
-    }
   }
   td {
-    // width: 14.285%;
+    width: 14.285%;
     padding: 0 0 5px;
     vertical-align: top;
+    background-position: 100% 60px;
     span {
       color: white;
     }
     &.col-1 {
-      background: #73e3ce url('@{img-path}bgd-week-1.png') no-repeat 100% 0;
+      background-color: #73e3ce;
+      background-image: url('@{img-path}bgd-week-1.png');
+      .heading {
+        background-color: #1dd2af;
+        &:before {
+          background-image: url('@{img-path}arrow-week-1.png');
+        }
+        span {
+          color: #197d6a;
+        }
+      }
+      ul {
+        // background: #73e3ce url('@{img-path}bgd-week-1.png') no-repeat 100% 0;
+      }
     }
     &.col-2 {
-      background: #7ee0a8 url('@{img-path}bgd-week-2.png') no-repeat 100% 0;
+      background-color: #7ee0a8;
+      background-image: url('@{img-path}bgd-week-2.png');
+      .heading {
+        background-color: #2ecc71;
+        &:before {
+          background-image: url('@{img-path}arrow-week-2.png');
+        }
+        span {
+          color: #0c6934;
+        }
+      }
+      ul {
+        // background: #7ee0a8 url('@{img-path}bgd-week-2.png') no-repeat 100% 0;
+      }
     }
     &.col-3 {
-      background: #82bfe9 url('@{img-path}bgd-week-3.png') no-repeat 100% 0;
+      background-color: #82bfe9;
+      background-image: url('@{img-path}bgd-week-3.png');
+      .heading {
+        background-color: #3498db;
+        &:before {
+          background-image: url('@{img-path}arrow-week-3.png');
+        }
+        span {
+          color: #0b4063;
+        }
+      }
+      ul {
+        // background: #82bfe9 url('@{img-path}bgd-week-3.png') no-repeat 100% 0;
+      }
     }
     &.col-4 {
-      background: #77a6c5 url('@{img-path}bgd-week-4.png') no-repeat 100% 0;
+      background-color: #77a6c5;
+      background-image: url('@{img-path}bgd-week-4.png');
+      .heading {
+        background-color: #246fa2;
+        &:before {
+          background-image: url('@{img-path}arrow-week-4.png');
+        }
+        span {
+          color: #041e2f;
+        }
+      }
+      ul {
+        // background: #77a6c5 url('@{img-path}bgd-week-4.png') no-repeat 100% 0;
+      }
     }
     &.col-5 {
-      background: #7bb0d3 url('@{img-path}bgd-week-5.png') no-repeat 100% 0;
+      background-color: #7bb0d3;
+      background-image: url('@{img-path}bgd-week-5.png');
+      .heading {
+        background-color: #2980b9;
+        &:before {
+          background-image: url('@{img-path}arrow-week-5.png');
+        }
+        span {
+          color: #6eb8e8;
+        }
+      }
+      ul {
+        // background: #7bb0d3 url('@{img-path}bgd-week-5.png') no-repeat 100% 0;
+      }
     }
     &.col-6 {
-      background: #79cd9c url('@{img-path}bgd-week-6.png') no-repeat 100% 0;
+      background-color: #79cd9c;
+      background-image: url('@{img-path}bgd-week-6.png');
+      .heading {
+        background-color: #27ae60;
+        &:before {
+          background-image: url('@{img-path}arrow-week-6.png');
+        }
+        span {
+          color: #0a5a2c;
+        }
+      }
+      ul {
+        // background: #79cd9c url('@{img-path}bgd-week-6.png') no-repeat 100% 0;
+      }
     }
     &.col-7 {
-      background: #6fc4b4 url('@{img-path}bgd-week-7.png') no-repeat 100% 0;
+      background-color: #6fc4b4;
+      background-image: url('@{img-path}bgd-week-7.png');
+      .heading {
+        background-color: #16a085;
+        &:before {
+          background-image: url('@{img-path}arrow-week-7.png');
+        }
+        span {
+          color: #40dabc;
+        }
+      }
+      ul {
+        // background: #6fc4b4 url('@{img-path}bgd-week-7.png') no-repeat 100% 0;
+      }
     }
   }
   ul {
+    overflow: hidden;
     a {
       overflow: hidden;
       display: block;
@@ -163,42 +191,45 @@
           background: url('@{img-path}bgd-item-opt-80.png');
         }
       }
-      .item {
-        display: inline-block;
-        padding: 15px 5px;
-      }
-      .icon {
-        float: left;
-        margin-right: 10px;
-      }
-      .desc {
-        overflow: hidden;
-        display: block;
-        padding: 0 3px 0 0;
-        text-align: left;
-      }
-      .title {
-        display: block;
-        color: #6d6d6b;
-      }
-      .time {
-        display: block;
-        margin-top: 3px;
-        color: #bb0332;
-      }
-      .location {
-        display: block;
-        padding: 8px 5px;
-        font-size: 0.786em;
-        color: #8d8e8e;
-        background: url('@{img-path}bgd-item-opt-30.png');
-      }
     }
+    .item {
+      display: inline-block;
+      padding: 15px 5px 18px;
+    }
+    .icon {
+      float: left;
+      margin-right: 10px;
+    }
+    .desc {
+      overflow: hidden;
+      display: block;
+      padding: 0 3px 0 0;
+      text-align: left;
+    }
+    .title {
+      display: block;
+      color: #6d6d6b;
+    }
+    .time {
+      display: block;
+      // margin-top: 3px;
+      color: #bb0332;
+    }
+    .location {
+      display: block;
+      padding: 7px 5px;
+      font-size: 0.786em;
+      color: #8d8e8e;
+      background: url('@{img-path}bgd-item-opt-30.png');
+    }
+  }
+  li:first-child .item {
+    padding-top: 20px;
   }
 }
 
-@media (max-width: 1023px) {
-  .week-block ul a {
+@media (min-width: 568px) and (max-width: 1023px) {
+  .week-block ul {
     .icon {
       float: none;
       margin: 0 auto;
@@ -216,6 +247,8 @@
 }
 @media (max-width: 567px) {
   .week-block {
+    margin: 20px 5px 0;
+    // background-color: white;
     table,
     caption,
     thead,
@@ -228,6 +261,18 @@
     th,
     td {
       width: 100%;
+    }
+    td {
+      margin-top: 5px;
+      padding: 0;
+      background-position: 100% 50px;
+    }
+    caption {
+      padding: 12px 5px;
+    }
+    .heading {
+      height: 50px;
+      padding: 10px 5px;
     }
   }
 }
