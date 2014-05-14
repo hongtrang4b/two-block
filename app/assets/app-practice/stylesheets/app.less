@@ -2,13 +2,15 @@
 @import "../../core/stylesheets/mixins.less";
 
 /* ===================
- * header/app.less
+ * app-practice/app.less
  * =================== */
 
 .practice-block {
   overflow: hidden;
   max-width: 950px;
   margin: 20px auto 0;
+  font-family: @MyriadPro;
+  font-size: 14px;
   color: white;
   > ul {
     overflow: hidden;
@@ -26,6 +28,7 @@
       position: relative;
       padding: 7px 10px;
       font-size: 1em;
+      font-weight: bold;
       background: url('@{img-path}bgd-item-opt-30.png');
       border-width: 1px 0;
       border-style: solid;
@@ -39,8 +42,6 @@
         .size(12px, 6px);
         margin-left: -6px;
         background: url('@{img-path}arrow-practice-1.png') no-repeat;
-        // border-width: 6px 6px 0;
-        // border-style: solid;
       }
     }
     .desc {
@@ -53,9 +54,10 @@
     .title {
       padding: 17px 10px;
       font-size: 1.143em;
+      // font-weight: 700;
     }
     .desc {
-      padding: 17px 35px;
+      padding: 17px 25px;
       font-size: 1em;
     }
   }

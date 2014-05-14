@@ -2,13 +2,15 @@
 @import "../../core/stylesheets/mixins.less";
 
 /* ===================
- * header/app.less
+ * app-week/app.less
  * =================== */
 
 .week-block {
   max-width: 950px;
   margin: 20px auto 0;
   padding: 5px;
+  font-family: @MyriadPro;
+  font-size: 14px;
   color: white;
   text-align: center;
   background: url('@{img-path}bgd-week.png');
@@ -21,21 +23,17 @@
   }
   caption {
     padding: 3px 5px;
-    // font-family: @MyriadProBold;
     font-size: 1.286em;
     font-weight: bold;
     background-color: #6483a2;
-    // border-radius: 4px 4px 0 0;
   }
   .heading {
     position: relative;
     z-index: 100;
     display: block;
-    // width: 14.285%;
     height: 60px;
     padding: 17px 5px 15px;
     text-align: center;
-    // font-family: @MyriadProRegular;
     .box-sizing(border-box);
     &:before {
       content: '';
@@ -45,8 +43,6 @@
       .size(12px; 6px);
       margin-left: -6px;
       background-repeat: no-repeat;
-      // border-width: 6px 6px 0;
-      // border-style: solid;
     }
     span {
       display: block;
@@ -72,9 +68,6 @@
           color: #197d6a;
         }
       }
-      ul {
-        // background: #73e3ce url('@{img-path}bgd-week-1.png') no-repeat 100% 0;
-      }
     }
     &.col-2 {
       background-color: #7ee0a8;
@@ -87,9 +80,6 @@
         span {
           color: #0c6934;
         }
-      }
-      ul {
-        // background: #7ee0a8 url('@{img-path}bgd-week-2.png') no-repeat 100% 0;
       }
     }
     &.col-3 {
@@ -104,9 +94,6 @@
           color: #0b4063;
         }
       }
-      ul {
-        // background: #82bfe9 url('@{img-path}bgd-week-3.png') no-repeat 100% 0;
-      }
     }
     &.col-4 {
       background-color: #77a6c5;
@@ -119,9 +106,6 @@
         span {
           color: #041e2f;
         }
-      }
-      ul {
-        // background: #77a6c5 url('@{img-path}bgd-week-4.png') no-repeat 100% 0;
       }
     }
     &.col-5 {
@@ -136,9 +120,6 @@
           color: #6eb8e8;
         }
       }
-      ul {
-        // background: #7bb0d3 url('@{img-path}bgd-week-5.png') no-repeat 100% 0;
-      }
     }
     &.col-6 {
       background-color: #79cd9c;
@@ -151,9 +132,6 @@
         span {
           color: #0a5a2c;
         }
-      }
-      ul {
-        // background: #79cd9c url('@{img-path}bgd-week-6.png') no-repeat 100% 0;
       }
     }
     &.col-7 {
@@ -168,9 +146,6 @@
           color: #40dabc;
         }
       }
-      ul {
-        // background: #6fc4b4 url('@{img-path}bgd-week-7.png') no-repeat 100% 0;
-      }
     }
   }
   ul {
@@ -179,7 +154,6 @@
       overflow: hidden;
       display: block;
       max-width: 100%;
-      // max-width: 110px;
       margin: 0 auto;
       background: url('@{img-path}bgd-item-opt-30.png');
       &:hover {
@@ -212,7 +186,6 @@
     }
     .time {
       display: block;
-      // margin-top: 3px;
       color: #bb0332;
     }
     .location {
@@ -241,14 +214,14 @@
   }
 }
 @media (max-width: 767px) {
-  body {
+  .week-block {
     font-size: 12px;
   }
 }
 @media (max-width: 567px) {
   .week-block {
     margin: 20px 5px 0;
-    // background-color: white;
+    font-size: 14px;
     table,
     caption,
     thead,
